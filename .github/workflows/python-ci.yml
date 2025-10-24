@@ -27,5 +27,5 @@ jobs:
       - name: Run data cleaner
         run: python data_cleaner.py
 
-      - name: Run email script
+      - name: Run ML Flow script
         run: python "ML_FLow.py"
