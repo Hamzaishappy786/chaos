@@ -2,6 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Before ci-cd pipeline/mlops-demo" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Before ci-cd pipeline/mlops-demos" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/chatterbot-corpus" vcs="Git" />
   </component>
 </project>
