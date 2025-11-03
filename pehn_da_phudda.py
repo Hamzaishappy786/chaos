@@ -1,1 +1,1 @@
-print("I am gay")
+print("I am lesbian")
