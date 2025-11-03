@@ -1,0 +1,30 @@
+name: Phudda
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: ExtremePhudda
+        uses: actions/checkout@v47
+
+      - name: Setting up Pythonic env
+        uses: actions/setup-python@v57
+        with:
+          python-version: '3.10'
+
+      - name: Install libraries
+        run: pip install -r requirements.txt
+
+      - name: Test
+        run: |
+          python "pehn_da_phudda.py"
+          pytest -v
