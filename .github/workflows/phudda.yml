@@ -25,5 +25,4 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Test
-        run: |
-          python "pehn_da_phudda.py"
+        run: python "pehn_da_phudda.py"
