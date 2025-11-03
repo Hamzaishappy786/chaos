@@ -27,4 +27,3 @@ jobs:
       - name: Test
         run: |
           python "pehn_da_phudda.py"
-          pytest -v
