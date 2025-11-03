@@ -12,17 +12,21 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
+    container:
+      image: python:3.10-slim  # Use Docker image as the environment
+
     steps:
       - name: ExtremePhudda
         uses: actions/checkout@v4
 
-      - name: Setting up Pythonic env
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.10'
+      - name: Install system deps (optional)
+        run: |
+          apt-get update && apt-get install -y --no-install-recommends \
+            build-essential && \
+          rm -rf /var/lib/apt/lists/*
 
       - name: Install libraries
-        run: pip install -r requirements.txt
+        run: pip install --no-cache-dir -r requirements.txt
 
       - name: Test
         run: python "pehn_da_phudda.py"
