@@ -2,3 +2,4 @@ pandas
 pytest
 chatterbot
 mlflow
+spacy
