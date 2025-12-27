@@ -1,0 +1,22 @@
+version: '3.10' # Use a recent Compose file format version
+
+services:
+  # Service 1: The Quiz Web Application
+  web:
+    build: . # Tell Docker Compose to build the image using the Dockerfile in the current directory
+    ports:
+      - "8000:5000" # Map host port 8000 to container port 5000 (where the Flask app runs)
+    volumes:
+      - .:/app # Bind mount the current directory to /app in the container for live updates
+    depends_on:
+      - redis # Ensure the Redis service starts before the web service
+    environment:
+      # Use the name of the Redis service as the hostname (Docker Compose handles the internal networking)
+      - REDIS_HOST=redis
+      - FLASK_ENV=development
+
+  # Service 2: The Database/Cache Layer
+  redis:
+    image: "redis:alpine" # Pull the official Redis image from Docker Hub
+    ports:
+      - "6379:6379" # Map host port 6379 to container port 6379 (optional, for external access)

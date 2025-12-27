@@ -1,0 +1,4 @@
+docker-quiz1/mysql-data/
+.idea/
+__pycache__/
+*.sock
