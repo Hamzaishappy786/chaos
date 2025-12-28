@@ -28,4 +28,4 @@ jobs:
         run: python data_cleaner.py
 
       - name: Run ML Flow script
-        run: python "ML_FLow.py"
+        run: python ML_FLow.py
