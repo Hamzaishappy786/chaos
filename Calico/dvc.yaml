@@ -1,0 +1,7 @@
+stages:
+  hamza:
+    cmd: python shiyaun.py
+    deps:
+    - data/data.csv
+    outs:
+    - data/cleaned_data.csv
