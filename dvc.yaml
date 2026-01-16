@@ -1,0 +1,7 @@
+stages:
+  cleaning:
+    cmd: python dvcs.py
+    deps:
+    - data/fraud.csv
+    outs:
+    - data/cleaned.csv
